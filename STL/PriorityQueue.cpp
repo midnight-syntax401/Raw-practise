@@ -39,6 +39,7 @@ int main(){
     cout<<endl;
 
     cout<<"Khaali hai kya bhai ??->"<<mini.empty()<<endl;
+    cout<<"Khaali hai kya bhai ??->"<<maxi.empty()<<endl;
 
 }
 
