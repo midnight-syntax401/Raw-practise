@@ -1,12 +1,28 @@
 #include<iostream>
 using namespace std;
 
+// upper to lower---> ch-'A'+'a'
+// Lower to upper---> ch-'a'+'A'
+// number conversion--->ch-'0'
+
+char toLowerCase(char ch){
+    if(ch>='a' && ch<='z')
+    return ch;
+      else{
+        char temp=ch-'A'+'a';
+        return temp;
+      }
+}
+
+
 bool checkpalindrome(char a[], int n){
     int s=0;
     int e=n-1;
 
     while(s<=e){
-        if(a[s]!=a[e]){
+
+        // Now its case sensitive
+        if(toLowerCase(a[s])!=toLowerCase(a[e])){
             return 0;
         }else{
             s++;
@@ -57,6 +73,9 @@ int main(){
     cout<<name<<endl;
 
     cout<<"Palindrome or not: "<<checkpalindrome(name, len)<<endl;
+
+    cout<<"Character is "<<toLowerCase('b')<<endl;
+    cout<<"Character is "<<toLowerCase('B')<<endl;
 
     return 0;
     
